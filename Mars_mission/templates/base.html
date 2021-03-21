@@ -16,6 +16,9 @@
         <h1>Миссия Колонизация Марса</h1>
     </nav>
     <h4>И на Марсе будут яблони цвести!</h4>
+    {% if current_user.is_authenticated %}
+    <div>{{ current_user.name }}</div>
+    {% endif %}
 </header>
 <!-- Begin page content -->
 <main role="main" class="container">

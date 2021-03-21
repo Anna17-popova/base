@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 align="center">Works log</h2>
+{% for job in mylist %}
+    <div>
+        <h5 align="left">Action #{{  job[0]  }}</h5>
+        <table border="2" width="1100" cellspacing="2">
+            <tr>
+                <td>Title of activity</td>
+                <td>Team leader</td>
+                <td>Duration</td>
+                <td>List of collaborates</td>
+                <td>Is finished</td>
+            </tr>
+            <tr>
+                <td>{{  job[1]  }}</td>
+                <td>{{  job[2]  }}</td>
+                <td>{{  job[3]  }}</td>
+                <td>{{  job[4]  }}</td>
+                <td>{{  job[5]  }}</td>
+            </tr>
+        </table>
+    </div>
+{% endfor %}
+{% endblock %}
